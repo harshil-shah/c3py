@@ -132,6 +132,7 @@ class YAxis(Axis):
         super(YAxis, self).__init__('y')
 
         self.padding.set('bottom', 0)
+        self.padding.set('top', 0)
 
 
 class Axes(ChartComponentDict):
