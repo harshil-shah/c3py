@@ -30,9 +30,10 @@ class Ticks(ChartComponentDict):
 
     def set_values(self, tick_values):
 
-        tick_values_str = [str(i) for i in tick_values]
+        if self.axis.axis_dimension == 'x' and self.axis.config['type'] != self.__string_wrap__('indexed'):
+            tick_values = [self.__string_wrap__(i) for i in tick_values]
 
-        self.config['values'] = tick_values_str
+        self.config['values'] = tick_values
 
 
 class XTicks(Ticks):
