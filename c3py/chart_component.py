@@ -6,7 +6,7 @@ class ChartComponent(object):
 
     def __string_wrap__(self, string_to_wrap):
 
-        return "'" + string_to_wrap + "'"
+        return "'" + str(string_to_wrap) + "'"
         
 
 class ChartComponentDict(ChartComponent):
