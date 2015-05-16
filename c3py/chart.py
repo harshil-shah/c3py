@@ -13,6 +13,16 @@ from .padding import Padding
 
 class Chart(object):
 
+    axes = Axes()
+    data = Data(axes)
+    grid = Grid(axes)
+    legend = Legend()
+    tooltip = Tooltip()
+    regions = Regions(axes)
+    point = Point()
+    size = Size()
+    padding = Padding()
+
     def __init__(self, name, local_jquery=None, local_requirejs=None, local_d3_js=None, local_c3_js=None,
                  local_c3_css=None):
 
