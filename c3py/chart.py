@@ -107,6 +107,13 @@ class Chart(object):
         return script
 
     def get_html_string(self):
+        """Returns the HTML string which will draw the chart.
+
+        In a Jupyter notebook, this would usually be used as the argument for IPython.display.HTML(),
+        for the interactive chart to be displayed in the notebook.
+
+        That is, IPython.display.HTML(chart.get_html_string()).
+        """
 
         styles = self.__get_main_styles_string__()
         script = self.__get_main_script_string__()
