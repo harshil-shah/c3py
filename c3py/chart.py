@@ -21,30 +21,25 @@ class Chart(object):
 
     :type name: string
 
-    :param local_jquery: (optional; default = None) Path to a local version of jquery. If not provided, one hosted on a
-        CDN is used.
+    :param local_jquery: Path to a local version of jquery. If not provided, one hosted on a CDN is used.
 
-    :type local_jquery: string
+    :type local_jquery: string; default = None
 
-    :param local_requirejs: (optional; default = None) Path to a local version of requirejs. If not provided, one
-        hosted on a CDN is used.
+    :param local_requirejs: Path to a local version of requirejs. If not provided, one hosted on a CDN is used.
 
-    :type local_requirejs: string
+    :type local_requirejs: string; default = None
 
-    :param local_d3_js: (optional; default = None) Path to a local version of d3js. If not provided, one hosted on a
-        CDN is used.
+    :param local_d3_js: Path to a local version of d3js. If not provided, one hosted on a CDN is used.
 
-    :type local_d3_js: string
+    :type local_d3_js: string; default = None
 
-    :param local_c3_js: (optional; default = None) Path to a local version of c3js. If not provided, one hosted on a
-        CDN is used.
+    :param local_c3_js: Path to a local version of c3js. If not provided, one hosted on a CDN is used.
 
-    :type local_c3_js: string
+    :type local_c3_js: string; default = None
 
-    :param local_c3_css: (optional; default = None) Path to a local version of c3's css. If not provided, one hosted
-        on a CDN is used.
+    :param local_c3_css: Path to a local version of c3's css. If not provided, one hosted on a CDN is used.
 
-    :type local_c3_css: string
+    :type local_c3_css: string; default = None
     """
 
     axes = Axes()
