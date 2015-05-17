@@ -12,14 +12,39 @@ from .padding import Padding
 
 
 class Chart(object):
-    """Create an instance of this class for each chart to be displayed. The various chart attributes and their methods
+    """
+    Create an instance of this class for each chart to be displayed. The various chart attributes and their methods
     can be used to customise the data represented, and the chart's appearance.
 
     :param name: The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
-    in the same document should have the same name.
+        in the same document should have the same name.
 
-    :param local_jquery(optional, default=None): Path to a local version of jquery. If not provided, one hosted on a
-    CDN is used.
+    :type name: string
+
+    :param local_jquery: (optional; default = None) Path to a local version of jquery. If not provided, one hosted on a
+        CDN is used.
+
+    :type local_jquery: string
+
+    :param local_requirejs: (optional; default = None) Path to a local version of requirejs. If not provided, one
+        hosted on a CDN is used.
+
+    :type local_requirejs: string
+
+    :param local_d3_js: (optional; default = None) Path to a local version of d3js. If not provided, one hosted on a
+        CDN is used.
+
+    :type local_d3_js: string
+
+    :param local_c3_js: (optional; default = None) Path to a local version of c3js. If not provided, one hosted on a
+        CDN is used.
+
+    :type local_c3_js: string
+
+    :param local_c3_css: (optional; default = None) Path to a local version of c3's css. If not provided, one hosted
+        on a CDN is used.
+
+    :type local_c3_css: string
     """
 
     axes = Axes()

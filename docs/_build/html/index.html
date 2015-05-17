@@ -61,20 +61,24 @@ can be used to customise the data represented, and the chart&#8217;s appearance.
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
+in the same document should have the same name.</li>
+<li><strong>local_jquery</strong> (<em>string</em>) &#8211; (optional; default = None) Path to a local version of jquery. If not provided, one hosted on a
+CDN is used.</li>
+<li><strong>local_requirejs</strong> (<em>string</em>) &#8211; (optional; default = None) Path to a local version of requirejs. If not provided, one
+hosted on a CDN is used.</li>
+<li><strong>local_d3_js</strong> (<em>string</em>) &#8211; (optional; default = None) Path to a local version of d3js. If not provided, one hosted on a
+CDN is used.</li>
+<li><strong>local_c3_js</strong> (<em>string</em>) &#8211; (optional; default = None) Path to a local version of c3js. If not provided, one hosted on a
+CDN is used.</li>
+<li><strong>local_c3_css</strong> (<em>string</em>) &#8211; (optional; default = None) Path to a local version of c3&#8217;s css. If not provided, one hosted
+on a CDN is used.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
-<p>in the same document should have the same name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>default=None)</strong> (<em>local_jquery(optional,</em>) &#8211; Path to a local version of jquery. If not provided, one hosted on a</td>
-</tr>
-</tbody>
-</table>
-<p>CDN is used.</p>
 <dl class="attribute">
 <dt id="c3py.Chart.axes">
 <code class="descname">axes</code><em class="property"> = &lt;c3py.axes.Axes object&gt;</em><a class="headerlink" href="#c3py.Chart.axes" title="Permalink to this definition">¶</a></dt>
