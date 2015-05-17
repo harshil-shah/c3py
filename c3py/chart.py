@@ -12,6 +12,15 @@ from .padding import Padding
 
 
 class Chart(object):
+    """Create an instance of this class for each chart to be displayed. The various chart attributes and their methods
+    can be used to customise the data represented, and the chart's appearance.
+
+    :param name: The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
+    in the same document should have the same name.
+
+    :param local_jquery(optional, default=None): Path to a local version of jquery. If not provided, one hosted on a
+    CDN is used.
+    """
 
     axes = Axes()
     data = Data(axes)
