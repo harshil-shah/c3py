@@ -1,5 +1,5 @@
 from .chart_component import ChartComponentDict
-from .ticks import XTicks, YTicks
+from .ticks import Ticks, XTicks, YTicks
 
 
 class AxisPadding(ChartComponentDict):
@@ -52,6 +52,12 @@ class Axis(ChartComponentDict):
 
     :type axis_dimension: str; ['x' | 'y']
     """
+
+    __axis__ = None
+
+    padding = AxisPadding(__axis__)
+    label = AxisLabel(__axis__)
+    ticks = Ticks(__axis__)
 
     def __init__(self, axis_dimension):
 
