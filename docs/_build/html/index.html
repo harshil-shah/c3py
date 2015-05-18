@@ -55,25 +55,19 @@
 <dl class="class">
 <dt id="c3py.Chart">
 <em class="property">class </em><code class="descclassname">c3py.</code><code class="descname">Chart</code><span class="sig-paren">(</span><em>name</em>, <em>local_jquery=None</em>, <em>local_requirejs=None</em>, <em>local_d3_js=None</em>, <em>local_c3_js=None</em>, <em>local_c3_css=None</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.Chart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an instance of this class for each chart to be displayed. The various chart attributes and their methods
-can be used to customise the data represented, and the chart&#8217;s appearance.</p>
+<dd><p>Create and modify a chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<em>string</em>) &#8211; The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
+<li><strong>name</strong> (<em>str</em>) &#8211; The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
 in the same document should have the same name.</li>
-<li><strong>local_jquery</strong> (<em>string; default = None</em>) &#8211; Path to a local version of jquery. If not provided, one hosted
-on a CDN is used.</li>
-<li><strong>local_requirejs</strong> (<em>string; default = None</em>) &#8211; Path to a local version of requirejs. If not provided, one
-hosted on a CDN is used.</li>
-<li><strong>local_d3_js</strong> (<em>string; default = None</em>) &#8211; Path to a local version of d3js. If not provided, one hosted on a
-CDN is used.</li>
-<li><strong>local_c3_js</strong> (<em>string; default = None</em>) &#8211; Path to a local version of c3js. If not provided, one hosted on a
-CDN is used.</li>
-<li><strong>local_c3_css</strong> (<em>string; default = None</em>) &#8211; Path to a local version of c3&#8217;s css. If not provided, one hosted
-on a CDN is used.</li>
+<li><strong>local_jquery</strong> (<em>str; default = None</em>) &#8211; Path to a local version of jquery. If not provided, one hosted on a CDN is used.</li>
+<li><strong>local_requirejs</strong> (<em>str; default = None</em>) &#8211; Path to a local version of requirejs. If not provided, one hosted on a CDN is used.</li>
+<li><strong>local_d3_js</strong> (<em>str; default = None</em>) &#8211; Path to a local version of d3js. If not provided, one hosted on a CDN is used.</li>
+<li><strong>local_c3_js</strong> (<em>str; default = None</em>) &#8211; Path to a local version of c3js. If not provided, one hosted on a CDN is used.</li>
+<li><strong>local_c3_css</strong> (<em>str; default = None</em>) &#8211; Path to a local version of c3&#8217;s css. If not provided, one hosted on a CDN is used.</li>
 </ul>
 </td>
 </tr>
@@ -92,10 +86,18 @@ on a CDN is used.</li>
 <dl class="method">
 <dt id="c3py.Chart.get_html_string">
 <code class="descname">get_html_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c3py.Chart.get_html_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the HTML string which will draw the chart.</p>
+<dd><p>Return the HTML string which will draw the chart.</p>
 <p>In a Jupyter notebook, this would usually be used as the argument for IPython.display.HTML(),
 for the interactive chart to be displayed in the notebook.</p>
 <p>That is, IPython.display.HTML(chart.get_html_string()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">
@@ -131,6 +133,121 @@ for the interactive chart to be displayed in the notebook.</p>
 <dl class="attribute">
 <dt id="c3py.Chart.tooltip">
 <code class="descname">tooltip</code><em class="property"> = &lt;c3py.tooltip.Tooltip object&gt;</em><a class="headerlink" href="#c3py.Chart.tooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.axes.Axes">
+<em class="property">class </em><code class="descclassname">c3py.axes.</code><code class="descname">Axes</code><a class="headerlink" href="#c3py.axes.Axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate the chart&#8217;s axes.</p>
+<dl class="method">
+<dt id="c3py.axes.Axes.add_secondary_y">
+<code class="descname">add_secondary_y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axes.add_secondary_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a secondary y axis to the chart.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="c3py.axes.Axes.x_axis">
+<code class="descname">x_axis</code><em class="property"> = &lt;c3py.axes.XAxis object&gt;</em><a class="headerlink" href="#c3py.axes.Axes.x_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="c3py.axes.Axes.y2_axis">
+<code class="descname">y2_axis</code><em class="property"> = &lt;c3py.axes.YAxis object&gt;</em><a class="headerlink" href="#c3py.axes.Axes.y2_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="c3py.axes.Axes.y_axis">
+<code class="descname">y_axis</code><em class="property"> = &lt;c3py.axes.YAxis object&gt;</em><a class="headerlink" href="#c3py.axes.Axes.y_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.axes.XAxis">
+<em class="property">class </em><code class="descclassname">c3py.axes.</code><code class="descname">XAxis</code><a class="headerlink" href="#c3py.axes.XAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#c3py.axes.Axis" title="c3py.axes.Axis"><code class="xref py py-class docutils literal"><span class="pre">c3py.axes.Axis</span></code></a></p>
+<p>Manipulate the chart&#8217;s x axis.</p>
+<dl class="method">
+<dt id="c3py.axes.XAxis.set_height">
+<code class="descname">set_height</code><span class="sig-paren">(</span><em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.XAxis.set_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the height of the x axis, in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>height</strong> (<em>int</em>) &#8211; The desired height of the x axis, in pixels.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.axes.XAxis.set_type">
+<code class="descname">set_type</code><span class="sig-paren">(</span><em>axis_type</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.XAxis.set_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the type of the x axis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axis_type</strong> (<em>str; [&#8216;indexed&#8217; | &#8216;category&#8217;| &#8216;timeseries&#8217;]</em>) &#8211; The type of the x axis.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.axes.YAxis">
+<em class="property">class </em><code class="descclassname">c3py.axes.</code><code class="descname">YAxis</code><a class="headerlink" href="#c3py.axes.YAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#c3py.axes.Axis" title="c3py.axes.Axis"><code class="xref py py-class docutils literal"><span class="pre">c3py.axes.Axis</span></code></a></p>
+<p>Manipulate the chart&#8217;s y axis.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.axes.Axis">
+<em class="property">class </em><code class="descclassname">c3py.axes.</code><code class="descname">Axis</code><span class="sig-paren">(</span><em>axis_dimension</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate an individual axis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axis_dimension</strong> (<em>str; [&#8216;x&#8217; | &#8216;y&#8217;]</em>) &#8211; The dimension of the axis.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="c3py.axes.Axis.set_range">
+<code class="descname">set_range</code><span class="sig-paren">(</span><em>minimum</em>, <em>maximum</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axis.set_range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="c3py.axes.Axis.set_range_max">
+<code class="descname">set_range_max</code><span class="sig-paren">(</span><em>maximum</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axis.set_range_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="c3py.axes.Axis.set_range_min">
+<code class="descname">set_range_min</code><span class="sig-paren">(</span><em>minimum</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axis.set_range_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="c3py.axes.Axis.set_visibility">
+<code class="descname">set_visibility</code><span class="sig-paren">(</span><em>visible</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.axes.Axis.set_visibility" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

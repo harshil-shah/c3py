@@ -45,6 +45,13 @@ class AxisLabel(ChartComponentDict):
 
 
 class Axis(ChartComponentDict):
+    """
+    Manipulate an individual axis.
+
+    :param axis_dimension: The dimension of the axis.
+
+    :type axis_dimension: str; ['x' | 'y']
+    """
 
     def __init__(self, axis_dimension):
 
@@ -102,6 +109,9 @@ class Axis(ChartComponentDict):
 
 
 class XAxis(Axis):
+    """
+    Manipulate the chart's x axis.
+    """
 
     def __init__(self):
 
@@ -110,6 +120,15 @@ class XAxis(Axis):
         self.config['type'] = self.__string_wrap__('indexed')
 
     def set_type(self, axis_type):
+        """
+        Set the type of the x axis.
+
+        :param axis_type: The type of the x axis.
+
+        :type axis_type: str; ['indexed' | 'category'| 'timeseries']
+
+        :return: None
+        """
 
         if axis_type not in ['indexed', 'category', 'timeseries']:
             raise Exception('axis_type must be "indexed", "category", or "timeseries".')
@@ -121,11 +140,22 @@ class XAxis(Axis):
             self.ticks.set_format('%Y-%m-%d')
 
     def set_height(self, height):
+        """
+        Set the height of the x axis, in pixels.
 
+        :param height: The desired height of the x axis, in pixels.
+
+        :type height: int
+
+        :return: None
+        """
         self.config['height'] = height
 
 
 class YAxis(Axis):
+    """
+    Manipulate the chart's y axis.
+    """
 
     def __init__(self):
 
@@ -136,6 +166,13 @@ class YAxis(Axis):
 
 
 class Axes(ChartComponentDict):
+    """
+    Manipulate the chart's axes.
+    """
+
+    x_axis = XAxis()
+    y_axis = YAxis()
+    y2_axis = YAxis()
 
     def __init__(self):
 
@@ -155,5 +192,10 @@ class Axes(ChartComponentDict):
         }
 
     def add_secondary_y(self):
+        """
+        Add a secondary y axis to the chart.
+
+        :return: None
+        """
 
         self.y2_axis.set_visibility(True)

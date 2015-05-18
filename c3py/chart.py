@@ -13,33 +13,32 @@ from .padding import Padding
 
 class Chart(object):
     """
-    Create an instance of this class for each chart to be displayed. The various chart attributes and their methods
-    can be used to customise the data represented, and the chart's appearance.
+    Create and modify a chart.
 
     :param name: The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
         in the same document should have the same name.
 
-    :type name: string
+    :type name: str
 
     :param local_jquery: Path to a local version of jquery. If not provided, one hosted on a CDN is used.
 
-    :type local_jquery: string; default = None
+    :type local_jquery: str; default = None
 
     :param local_requirejs: Path to a local version of requirejs. If not provided, one hosted on a CDN is used.
 
-    :type local_requirejs: string; default = None
+    :type local_requirejs: str; default = None
 
     :param local_d3_js: Path to a local version of d3js. If not provided, one hosted on a CDN is used.
 
-    :type local_d3_js: string; default = None
+    :type local_d3_js: str; default = None
 
     :param local_c3_js: Path to a local version of c3js. If not provided, one hosted on a CDN is used.
 
-    :type local_c3_js: string; default = None
+    :type local_c3_js: str; default = None
 
     :param local_c3_css: Path to a local version of c3's css. If not provided, one hosted on a CDN is used.
 
-    :type local_c3_css: string; default = None
+    :type local_c3_css: str; default = None
     """
 
     axes = Axes()
@@ -136,12 +135,15 @@ class Chart(object):
         return script
 
     def get_html_string(self):
-        """Returns the HTML string which will draw the chart.
+        """
+        Return the HTML string which will draw the chart.
 
         In a Jupyter notebook, this would usually be used as the argument for IPython.display.HTML(),
         for the interactive chart to be displayed in the notebook.
 
         That is, IPython.display.HTML(chart.get_html_string()).
+
+        :return: str
         """
 
         styles = self.__get_main_styles_string__()

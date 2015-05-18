@@ -15,6 +15,23 @@ Contents:
    :members:
    :undoc-members:
 
+.. autoclass:: c3py.axes.Axes
+   :members:
+   :undoc-members:
+
+.. autoclass:: c3py.axes.XAxis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: c3py.axes.YAxis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: c3py.axes.Axis
+   :members:
+   :undoc-members:
 
 
 Indices and tables
