@@ -3,6 +3,15 @@ from .ticks import Ticks, XTicks, YTicks
 
 
 class AxisPadding(ChartComponentDict):
+    """
+    Manipulate the padding of the axis.
+
+    N.B. padding refers to the distance between the last tick of the axis and the end of the axis itself.
+
+    :param axis: The axis object which this padding applies to.
+
+    :type axis: c3py.axes.Axis
+    """
 
     def __init__(self, axis):
 
@@ -11,6 +20,18 @@ class AxisPadding(ChartComponentDict):
         self.axis = axis
 
     def set(self, location, padding_amount):
+        """
+        Set the axis padding.
+
+        :param location: Which end of the axis to pad.
+
+        :type location: str; x: ['left' | 'right']; y: ['bottom' | 'top']
+
+        :param padding_amount: The amount by which to pad the axis. For the y axis, this is in pixels. For the x
+            axis, this is in the units of the axis.
+
+        :type padding_amount: int | float
+        """
 
         if self.axis.axis_dimension == 'x' and location not in ['left', 'right']:
             raise Exception('for x axis, padding location must be "left" or "right".')
@@ -24,6 +45,13 @@ class AxisPadding(ChartComponentDict):
 
 
 class AxisLabel(ChartComponentDict):
+    """
+    Manipulate the label of the axis.
+
+    :param axis: The axis object which this label applies to.
+
+    :type axis: c3py.axes.Axis
+    """
 
     def __init__(self, axis):
 
@@ -32,6 +60,21 @@ class AxisLabel(ChartComponentDict):
         self.axis = axis
 
     def set(self, label_text, label_position=None):
+        """
+        Set the axis label.
+
+        :param label_text: The text for the axis label.
+
+        :type label_text: str
+
+        :param label_position: The position of the axis label.
+
+        :type label_position: str; default = None; x: ['inner-right' | 'inner-center' | 'inner-left' | 'outer-right' |
+            'outer-center' | 'outer-left']; y: ['inner-top' | 'inner-middle' | 'inner-bottom' | 'outer-top' |
+            'outer-middle' | 'outer-bottom']
+
+        :return: None
+        """
 
         if label_position is None:
 
@@ -87,6 +130,15 @@ class Axis(ChartComponentDict):
             }
 
     def set_visibility(self, visible):
+        """
+        Show or hide the axis.
+
+        :param visible: Whether or not the axis should be visible.
+
+        :type visible: bool
+
+        :return: None
+        """
 
         self.config['show'] = str(visible).lower()
 
@@ -101,14 +153,45 @@ class Axis(ChartComponentDict):
             self.config[limit_type] = value
 
     def set_range_min(self, minimum):
+        """
+        Set the minimum value for the axis.
+
+        :param minimum: The minimum value for the axis.
+
+        :type minimum: int | float
+
+        :return: None
+        """
 
         self.__set_range_limit__('min', minimum)
 
     def set_range_max(self, maximum):
+        """
+        Set the maximum value for the axis.
+
+        :param maximum: The maximum value for the axis.
+
+        :type maximum: int | float
+
+        :return: None
+        """
 
         self.__set_range_limit__('max', maximum)
 
     def set_range(self, minimum, maximum):
+        """
+        Set the range of values for the axis.
+
+        :param minimum: The minimum value for the axis.
+
+        :type minimum: int | float
+
+        :param maximum: The maximum value for the axis.
+
+        :type maximum: int | float
+
+        :return: None
+        """
 
         self.set_range_min(minimum)
         self.set_range_max(maximum)

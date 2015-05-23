@@ -18,3 +18,11 @@ c3py.axes
 .. autoclass:: c3py.axes.Axis
    :members:
    :undoc-members:
+
+.. autoclass:: c3py.axes.AxisPadding
+   :members:
+   :undoc-members:
+
+.. autoclass:: c3py.axes.AxisLabel
+   :members:
+   :undoc-members:
