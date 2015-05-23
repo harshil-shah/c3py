@@ -8,6 +8,7 @@ Contents:
 
    chart.rst
    axes.rst
+   ticks.rst
 
 
 Indices and tables

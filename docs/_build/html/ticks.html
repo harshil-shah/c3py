@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>c3py.ticks &mdash; c3py 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="c3py 0.1 documentation" href="index.html" />
+    <link rel="prev" title="c3py.axes" href="axes.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="axes.html" title="c3py.axes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">c3py 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c3py-ticks">
+<h1>c3py.ticks<a class="headerlink" href="#c3py-ticks" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c3py.ticks.XTicks">
+<em class="property">class </em><code class="descclassname">c3py.ticks.</code><code class="descname">XTicks</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.XTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#c3py.ticks.Ticks" title="c3py.ticks.Ticks"><code class="xref py py-class docutils literal"><span class="pre">c3py.ticks.Ticks</span></code></a></p>
+<dl class="method">
+<dt id="c3py.ticks.XTicks.cull">
+<code class="descname">cull</code><span class="sig-paren">(</span><em>max_ticks</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.XTicks.cull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limit the number of x tick labels displayed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>max_ticks</strong> (<em>int</em>) &#8211; The maximum number of x tick labels to be displayed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.ticks.XTicks.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>degrees</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.XTicks.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate the x tick labels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>degrees</strong> (<em>int; between 0 and 360</em>) &#8211; The number of degrees by which to rotate the x tick labels.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.ticks.XTicks.set_fit">
+<code class="descname">set_fit</code><span class="sig-paren">(</span><em>fit</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.XTicks.set_fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit x axis ticks. If true set, the ticks will be positioned nicely. If false set, the ticks will be
+positioned according to x value of the data points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fit</strong> (<em>bool</em>) &#8211; Whether or not to fit x axis ticks.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.ticks.XTicks.set_multiline">
+<code class="descname">set_multiline</code><span class="sig-paren">(</span><em>multiline</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.XTicks.set_multiline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control whether or not the x tick labels should occupy multiple lines.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>multiline</strong> (<em>bool</em>) &#8211; Whether or not the x tick labels should occupy multiple lines</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.ticks.YTicks">
+<em class="property">class </em><code class="descclassname">c3py.ticks.</code><code class="descname">YTicks</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.YTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#c3py.ticks.Ticks" title="c3py.ticks.Ticks"><code class="xref py py-class docutils literal"><span class="pre">c3py.ticks.Ticks</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.ticks.Ticks">
+<em class="property">class </em><code class="descclassname">c3py.ticks.</code><code class="descname">Ticks</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.Ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate the axis ticks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axis</strong> (<a class="reference internal" href="axes.html#c3py.axes.Axis" title="c3py.axes.Axis"><em>c3py.axes.Axis</em></a>) &#8211; The axis object to which the ticks belong.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="c3py.ticks.Ticks.set_count">
+<code class="descname">set_count</code><span class="sig-paren">(</span><em>tick_count</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.Ticks.set_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of ticks on the axis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tick_count</strong> (<em>int</em>) &#8211; The desired number of ticks.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.ticks.Ticks.set_format">
+<code class="descname">set_format</code><span class="sig-paren">(</span><em>tick_format</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.Ticks.set_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the formatting of the tick labels. See <a class="reference external" href="https://github.com/mbostock/d3/wiki/Formatting">https://github.com/mbostock/d3/wiki/Formatting</a> for formatting
+numbers, and <a class="reference external" href="https://github.com/mbostock/d3/wiki/Time-Formatting">https://github.com/mbostock/d3/wiki/Time-Formatting</a> for formatting dates / times.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tick_format</strong> (<em>str</em>) &#8211; The formatting of the tick labels.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.ticks.Ticks.set_values">
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>tick_values</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.ticks.Ticks.set_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the values of the ticks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tick_values</strong> (<em>list</em>) &#8211; A list of tick values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="axes.html"
+                        title="previous chapter">c3py.axes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ticks.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Harshil Shah.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.4</a>
+      
+      |
+      <a href="_sources/ticks.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>
