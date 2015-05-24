@@ -5,9 +5,12 @@ class Ticks(ChartComponentDict):
     """
     Manipulate the axis ticks.
 
-    :param axis: The axis object to which the ticks belong.
+    Parameters
+    ----------
 
-    :type axis: c3py.axes.Axis
+    axis : c3py.axes.Axis
+
+        The axis object to which the ticks belong.
     """
 
     def __init__(self, axis):
@@ -21,11 +24,16 @@ class Ticks(ChartComponentDict):
         Set the formatting of the tick labels. See https://github.com/mbostock/d3/wiki/Formatting for formatting
         numbers, and https://github.com/mbostock/d3/wiki/Time-Formatting for formatting dates / times.
 
-        :param tick_format: The formatting of the tick labels.
+        Parameters
+        ----------
 
-        :type tick_format: str
+        tick_format : str
 
-        :return: None
+            The formatting of the tick labels.
+
+        Returns
+        -------
+        None
         """
 
         if self.axis.axis_dimension == 'x':
@@ -45,11 +53,16 @@ class Ticks(ChartComponentDict):
         """
         Set the number of ticks on the axis.
 
-        :param tick_count: The desired number of ticks.
+        Parameters
+        ----------
 
-        :type tick_count: int
+        tick_count : int
 
-        :return: None
+            The desired number of ticks.
+
+        Returns
+        -------
+        None
         """
 
         self.config['count'] = tick_count
@@ -58,11 +71,15 @@ class Ticks(ChartComponentDict):
         """
         Set the values of the ticks.
 
-        :param tick_values: A list of tick values.
+        Parameters
 
-        :type tick_values: list
+        tick_values : list
 
-        :return: None
+            A list of tick values.
+
+        Returns
+        -------
+        None
         """
 
         if self.axis.axis_dimension == 'x' and self.axis.config['type'] != self.__string_wrap__('indexed'):
@@ -81,11 +98,16 @@ class XTicks(Ticks):
         """
         Limit the number of x tick labels displayed.
 
-        :param max_ticks: The maximum number of x tick labels to be displayed.
+        Parameters
+        ----------
 
-        :type max_ticks: int
+        max_ticks : int
 
-        :return: None
+            The maximum number of x tick labels to be displayed.
+
+        Returns
+        -------
+        None
         """
 
         self.config['culling'] = {
@@ -96,11 +118,16 @@ class XTicks(Ticks):
         """
         Rotate the x tick labels.
 
-        :param degrees: The number of degrees by which to rotate the x tick labels.
+        Parameters
+        ----------
 
-        :type degrees: int; between 0 and 360
+        degrees : int
 
-        :return: None
+            The number of degrees by which to rotate the x tick labels.
+
+        Returns
+        -------
+        None
         """
 
         self.config['rotate'] = degrees
@@ -109,11 +136,16 @@ class XTicks(Ticks):
         """
         Control whether or not the x tick labels should occupy multiple lines.
 
-        :param multiline: Whether or not the x tick labels should occupy multiple lines
+        Parameters
+        ----------
 
-        :type multiline: bool
+        multiline : bool
 
-        :return: None
+            Whether or not the x tick labels should occupy multiple lines
+
+        Returns
+        -------
+        None
         """
 
         self.config['multiline'] = str(multiline).lower()
@@ -123,11 +155,16 @@ class XTicks(Ticks):
         Fit x axis ticks. If true set, the ticks will be positioned nicely. If false set, the ticks will be
         positioned according to x value of the data points.
 
-        :param fit: Whether or not to fit x axis ticks.
+        Parameters
+        ----------
 
-        :type fit: bool
+        fit : bool
 
-        :return: None
+            Whether or not to fit x axis ticks.
+
+        Returns
+        -------
+        None
         """
 
         self.config['fit'] = str(fit).lower()
