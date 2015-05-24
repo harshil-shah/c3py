@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    chart.rst
+   data.rst
    axes.rst
    ticks.rst
 

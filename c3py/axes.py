@@ -8,9 +8,12 @@ class AxisPadding(ChartComponentDict):
 
     N.B. padding refers to the distance between the last tick of the axis and the end of the axis itself.
 
-    :param axis: The axis object which this padding applies to.
+    Parameters
+    ----------
 
-    :type axis: c3py.axes.Axis
+    axis : c3py.axes.Axis
+
+        The axis object which this padding applies to.
     """
 
     def __init__(self, axis):
@@ -23,16 +26,22 @@ class AxisPadding(ChartComponentDict):
         """
         Set the axis padding.
 
-        :param location: Which end of the axis to pad.
+        Parameters
+        ----------
 
-        :type location: str; x: ['left' | 'right']; y: ['bottom' | 'top']
+        location : str
 
-        :param padding_amount: The amount by which to pad the axis. For the y axis, this is in pixels. For the x
-            axis, this is in the units of the axis.
+            Which end of the axis to pad.
 
-        :type padding_amount: int | float
+            **Accepts (for x axis):** ['left' | 'right']
+
+            **Accepts (for y axis):** ['bottom' | 'top']
+
+        padding_amount : int | float
+
+            The amount by which to pad the axis. For the y axis, this is in pixels. For the x axis, this is in the
+            units of the axis.
         """
-
         if self.axis.axis_dimension == 'x' and location not in ['left', 'right']:
             raise Exception('for x axis, padding location must be "left" or "right".')
 
@@ -40,7 +49,6 @@ class AxisPadding(ChartComponentDict):
             raise Exception('for y axis, padding location must be "bottom" or "top".')
 
         else:
-
             self.config[location] = padding_amount
 
 
@@ -48,9 +56,12 @@ class AxisLabel(ChartComponentDict):
     """
     Manipulate the label of the axis.
 
-    :param axis: The axis object which this label applies to.
+    Parameters
+    ----------
 
-    :type axis: c3py.axes.Axis
+    axis : c3py.axes.Axis
+
+        The axis object which this label applies to.
     """
 
     def __init__(self, axis):
@@ -63,19 +74,27 @@ class AxisLabel(ChartComponentDict):
         """
         Set the axis label.
 
-        :param label_text: The text for the axis label.
+        Parameters
+        ----------
 
-        :type label_text: str
+        label_text : str
 
-        :param label_position: The position of the axis label.
+            The text for the axis label.
 
-        :type label_position: str; default = None; x: ['inner-right' | 'inner-center' | 'inner-left' | 'outer-right' |
-            'outer-center' | 'outer-left']; y: ['inner-top' | 'inner-middle' | 'inner-bottom' | 'outer-top' |
-            'outer-middle' | 'outer-bottom']
+        label_position : str
 
-        :return: None
+            The position of the axis label.
+
+            **Accepts (for x axis):** ['inner-right' | 'inner-center' | 'inner-left' | 'outer-right' | 'outer-center' |
+            'outer-left']
+
+            **Accepts (for y axis):** ['inner-top' | 'inner-middle' | 'inner-bottom' | 'outer-top' | 'outer-middle' |
+            'outer-bottom']
+
+        Returns
+        -------
+        None
         """
-
         if label_position is None:
 
             if self.axis.axis_dimension == 'x':
@@ -91,11 +110,15 @@ class Axis(ChartComponentDict):
     """
     Manipulate an individual axis.
 
-    :param axis_dimension: The dimension of the axis.
+    Parameters
+    ----------
 
-    :type axis_dimension: str; ['x' | 'y']
+    axis_dimension : str
+
+        The dimension of the axis.
+
+        **Accepts:** ['x' | 'y']
     """
-
     __axis__ = None
 
     padding = AxisPadding(__axis__)
@@ -133,11 +156,16 @@ class Axis(ChartComponentDict):
         """
         Show or hide the axis.
 
-        :param visible: Whether or not the axis should be visible.
+        Parameters
+        ----------
 
-        :type visible: bool
+        visible : bool
 
-        :return: None
+            Whether or not the axis is visible.
+
+        Returns
+        -------
+        None
         """
 
         self.config['show'] = str(visible).lower()
@@ -156,43 +184,55 @@ class Axis(ChartComponentDict):
         """
         Set the minimum value for the axis.
 
-        :param minimum: The minimum value for the axis.
+        Parameters
+        ----------
 
-        :type minimum: int | float
+        minimum : int | float
 
-        :return: None
+            The minimum value for the axis.
+
+        Returns
+        -------
+        None
         """
-
         self.__set_range_limit__('min', minimum)
 
     def set_range_max(self, maximum):
         """
         Set the maximum value for the axis.
 
-        :param maximum: The maximum value for the axis.
+        Parameters
+        ----------
 
-        :type maximum: int | float
+        maximum : int | float
 
-        :return: None
+            The maximum value for the axis.
+
+        Returns
+        -------
+        None
         """
-
         self.__set_range_limit__('max', maximum)
 
     def set_range(self, minimum, maximum):
         """
         Set the range of values for the axis.
 
-        :param minimum: The minimum value for the axis.
+        Parameters
+        ----------
 
-        :type minimum: int | float
+        minimum : int | float
 
-        :param maximum: The maximum value for the axis.
+            The minimum value for the axis.
 
-        :type maximum: int | float
+        maximum : int | float
 
-        :return: None
+            The maximum value for the axis.
+
+        Returns
+        -------
+        None
         """
-
         self.set_range_min(minimum)
         self.set_range_max(maximum)
 
@@ -201,7 +241,6 @@ class XAxis(Axis):
     """
     Manipulate the chart's x axis.
     """
-
     def __init__(self):
 
         super(XAxis, self).__init__('x')
@@ -212,13 +251,19 @@ class XAxis(Axis):
         """
         Set the type of the x axis.
 
-        :param axis_type: The type of the x axis.
+        Parameters
+        ----------
 
-        :type axis_type: str; ['indexed' | 'category'| 'timeseries']
+        axis_type : str
 
-        :return: None
+            The type of the x axis.
+
+            **Accepts:** ['indexed' | 'category' | 'timeseries']
+
+        Returns
+        -------
+        None
         """
-
         if axis_type not in ['indexed', 'category', 'timeseries']:
             raise Exception('axis_type must be "indexed", "category", or "timeseries".')
 
@@ -230,13 +275,18 @@ class XAxis(Axis):
 
     def set_height(self, height):
         """
-        Set the height of the x axis, in pixels.
+        Set the height of the x axis.
 
-        :param height: The desired height of the x axis, in pixels.
+        Parameters
+        ----------
 
-        :type height: int
+        height : int
 
-        :return: None
+            The height of the x axis, in pixels.
+
+        Returns
+        -------
+        None
         """
         self.config['height'] = height
 
@@ -245,7 +295,6 @@ class YAxis(Axis):
     """
     Manipulate the chart's y axis.
     """
-
     def __init__(self):
 
         super(YAxis, self).__init__('y')
@@ -258,7 +307,6 @@ class Axes(ChartComponentDict):
     """
     Manipulate the chart's axes.
     """
-
     x_axis = XAxis()
     y_axis = YAxis()
     y2_axis = YAxis()
@@ -284,7 +332,8 @@ class Axes(ChartComponentDict):
         """
         Add a secondary y axis to the chart.
 
-        :return: None
+        Returns
+        -------
+        None
         """
-
         self.y2_axis.set_visibility(True)
