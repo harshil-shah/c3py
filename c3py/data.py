@@ -5,9 +5,12 @@ class Data(ChartComponentDict):
     """
     Control the data which the chart shows.
 
-    :param axes: The chart's axes object.
+    Parameters
+    ----------
 
-    :type axes: c3py.axes.Axes
+    axes : c3py.axes.Axes
+
+        The chart's axes object.
     """
 
     def __init__(self, axes):
