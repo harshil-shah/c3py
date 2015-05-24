@@ -245,11 +245,41 @@ class Data(ChartComponentDict):
         self.__add_xy_series__(x, y, label, chart_type, axis, color)
 
     def group_series(self, labels):
+        """
+        Group data series together, to stack charts atop each other.
 
+        Parameters
+        ----------
+
+        labels : list of str
+
+            A list of names of the series to be grouped together.
+
+        Returns
+        -------
+        None
+        """
         self.config['groups'].append([self.__string_wrap__(i) for i in labels])
 
     def add_labels(self, series_name, label_format=''):
+        """
+        Add data labels to the chart.
 
+        Parameters
+        ----------
+
+        series_name : str
+
+            The name of the series for which data labels will be added.
+
+        label_format : str, optional
+
+            The format applied to the data labels (see https://github.com/mbostock/d3/wiki/Formatting).
+
+        Returns
+        -------
+        None
+        """
         self.config['labels']['format'][series_name] = "d3.format('{label_format}')".format(
             label_format=label_format
         )
