@@ -15,30 +15,43 @@ class Chart(object):
     """
     Create and modify a chart.
 
-    :param name: The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts
-        in the same document should have the same name.
+    Parameters
+    ----------
 
-    :type name: str
+    name : str
 
-    :param local_jquery: Path to a local version of jquery. If not provided, one hosted on a CDN is used.
+        The name of the chart. This will be the id of the div that holds the chart. Therefore no two charts in the
+        same document should have the same name.
 
-    :type local_jquery: str; default = None
+    local_jquery : str
 
-    :param local_requirejs: Path to a local version of requirejs. If not provided, one hosted on a CDN is used.
+        Path to a local version of jquery. If not provided, one hosted on a CDN is used.
 
-    :type local_requirejs: str; default = None
+        **Default:** None
 
-    :param local_d3_js: Path to a local version of d3js. If not provided, one hosted on a CDN is used.
+    local_requirejs : str
 
-    :type local_d3_js: str; default = None
+        Path to a local version of requirejs. If not provided, one hosted on a CDN is used.
 
-    :param local_c3_js: Path to a local version of c3js. If not provided, one hosted on a CDN is used.
+        **Default:** None
 
-    :type local_c3_js: str; default = None
+    local_d3_js : str
 
-    :param local_c3_css: Path to a local version of c3's css. If not provided, one hosted on a CDN is used.
+        Path to a local version of d3js. If not provided, one hosted on a CDN is used.
 
-    :type local_c3_css: str; default = None
+        **Default:** None
+
+    local_c3_js : str
+
+        Path to a local version of c3js. If not provided, one hosted on a CDN is used.
+
+        **Default:** None
+
+    local_c3_css : str
+
+        Path to a local version of c3's css. If not provided, one hosted on a CDN is used.
+
+        **Default:** None
     """
 
     axes = Axes()
@@ -143,7 +156,9 @@ class Chart(object):
 
         That is, IPython.display.HTML(chart.get_html_string()).
 
-        :return: str
+        Returns
+        -------
+        str
         """
 
         styles = self.__get_main_styles_string__()
