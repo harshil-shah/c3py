@@ -10,7 +10,7 @@ Contents:
    data.rst
    axes.rst
    ticks.rst
-
+   grid.rst
 
 Indices and tables
 ==================

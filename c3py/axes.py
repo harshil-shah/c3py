@@ -41,6 +41,10 @@ class AxisPadding(ChartComponentDict):
 
             The amount by which to pad the axis. For the y axis, this is in pixels. For the x axis, this is in the
             units of the axis.
+
+        Returns
+        -------
+        None
         """
         if self.axis.axis_dimension == 'x' and location not in ['left', 'right']:
             raise Exception('for x axis, padding location must be "left" or "right".')

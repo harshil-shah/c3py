@@ -52,17 +52,28 @@ class Chart(object):
         Path to a local version of c3's css. If not provided, one hosted on a CDN is used.
 
         **Default:** None
-    """
 
-    axes = Axes()
-    data = Data(axes)
-    grid = Grid(axes)
-    legend = Legend()
-    tooltip = Tooltip()
-    regions = Regions(axes)
-    point = Point()
-    size = Size()
-    padding = Padding()
+    Attributes
+    ----------
+
+    axes : c3py.axes.Axes
+
+    data : c3py.data.Data
+
+    grid : c3py.grid.Grid
+
+    legend : c3py.legend.Legend
+
+    tooltip : c3py.tooltip.Tooltip
+
+    regions : c3py.regions.Regions
+
+    point : c3py.point.Point
+
+    size : c3py.size.Size
+
+    padding : c3py.padding.Padding
+    """
 
     def __init__(self, name, local_jquery=None, local_requirejs=None, local_d3_js=None, local_c3_js=None,
                  local_c3_css=None):
