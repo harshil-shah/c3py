@@ -11,6 +11,7 @@ Contents:
    axes.rst
    ticks.rst
    grid.rst
+   legend.rst
 
 Indices and tables
 ==================

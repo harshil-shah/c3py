@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>c3py.grid &mdash; c3py 0.1 documentation</title>
+  <title>c3py.legend &mdash; c3py 0.1 documentation</title>
   
 
   
@@ -31,8 +31,7 @@
 
   
     <link rel="top" title="c3py 0.1 documentation" href="index.html"/>
-        <link rel="next" title="c3py.legend" href="legend.html"/>
-        <link rel="prev" title="c3py.ticks" href="ticks.html"/> 
+        <link rel="prev" title="c3py.grid" href="grid.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -76,8 +75,8 @@
 <li class="toctree-l1"><a class="reference internal" href="data.html">c3py.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axes.html">c3py.axes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ticks.html">c3py.ticks</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">c3py.grid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="legend.html">c3py.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid.html">c3py.grid</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">c3py.legend</a></li>
 </ul>
 
           
@@ -102,11 +101,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>c3py.grid</li>
+    <li>c3py.legend</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/grid.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/legend.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -115,67 +114,60 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="c3py-grid">
-<h1>c3py.grid<a class="headerlink" href="#c3py-grid" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="c3py-legend">
+<h1>c3py.legend<a class="headerlink" href="#c3py-legend" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="c3py.grid.Grid">
-<em class="property">class </em><code class="descclassname">c3py.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manipulate the chart&#8217;s grid.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> (<a class="reference internal" href="axes.html#c3py.axes.Axes" title="c3py.axes.Axes"><em>c3py.axes.Axes</em></a>) &#8211; The chart&#8217;s axes object.</td>
-</tr>
-</tbody>
-</table>
+<dt id="c3py.legend.Legend">
+<em class="property">class </em><code class="descclassname">c3py.legend.</code><code class="descname">Legend</code><a class="headerlink" href="#c3py.legend.Legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate the chart&#8217;s legend.</p>
 <dl class="method">
-<dt id="c3py.grid.Grid.custom_grid_line">
-<code class="descname">custom_grid_line</code><span class="sig-paren">(</span><em>axis</em>, <em>value</em>, <em>label=''</em>, <em>label_position='end'</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid.custom_grid_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a custom grid line to the chart.</p>
+<dt id="c3py.legend.Legend.hide">
+<code class="descname">hide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c3py.legend.Legend.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide the chart&#8217;s legend.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>axis</strong> (<em>str</em>) &#8211; <p>The axis on which to display the custom grid line.</p>
-<p><strong>Accepts:</strong> [&#8216;x&#8217; | &#8216;y&#8217; | &#8216;y2&#8217;]</p>
-</li>
-<li><strong>value</strong> (<em>must match x axis type</em>) &#8211; The value at which to display the custom grid line.</li>
-<li><strong>label</strong> (<em>str, optional</em>) &#8211; <p>The label to display with the custom grid line.</p>
-<p><strong>Default:</strong> &#8216;&#8217;</p>
-</li>
-<li><strong>label_position</strong> (<em>str, optional</em>) &#8211; <p>The position on the grid line at which to display the label.</p>
-<p><strong>Default:</strong> &#8216;end&#8217;</p>
-<p><strong>Accepts:</strong> [&#8216;start&#8217; | &#8216;middle&#8217; | &#8216;end&#8217;]</p>
-</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
-<dt id="c3py.grid.Grid.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>x=True</em>, <em>y=True</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid.show" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display a grid on the chart.</p>
+<dt id="c3py.legend.Legend.hide_series">
+<code class="descname">hide_series</code><span class="sig-paren">(</span><em>series_to_hide</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.legend.Legend.hide_series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide a specific series from the legend.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>series_to_hide</strong> (<em>str</em>) &#8211; The name of the series to hide.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="c3py.legend.Legend.set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>legend_position</em>, <em>inset_anchor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.legend.Legend.set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the legend.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>bool, optional</em>) &#8211; <p>Whether or not to display the x grid.</p>
-<p><strong>Default:</strong> True</p>
+<li><strong>legend_position</strong> (<em>str</em>) &#8211; <p>The position of the legend.</p>
+<p><strong>Accepts:</strong> [&#8216;bottom&#8217; | &#8216;right&#8217; | &#8216;inset&#8217;]</p>
 </li>
-<li><strong>y</strong> (<em>bool, optional</em>) &#8211; <p>Whether or not to display the y grid.</p>
-<p><strong>Default:</strong> True</p>
+<li><strong>inset_anchor</strong> (<em>str</em>) &#8211; <p>If legend_position is set to &#8216;inset&#8217;, this parameter states where the legend should be anchored to.</p>
+<p><strong>Accepts:</strong> [&#8216;top-left&#8217; | &#8216;top-right&#8217; | &#8216;bottom-left&#8217; | &#8216;bottom-right&#8217;]</p>
 </li>
 </ul>
 </td>
@@ -200,10 +192,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="legend.html" class="btn btn-neutral float-right" title="c3py.legend" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="ticks.html" class="btn btn-neutral" title="c3py.ticks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="grid.html" class="btn btn-neutral" title="c3py.grid" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
