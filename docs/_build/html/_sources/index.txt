@@ -15,6 +15,8 @@ Contents:
    tooltip.rst
    regions.rst
    point.rst
+   size.rst
+   padding.rst
 
 Indices and tables
 ==================
