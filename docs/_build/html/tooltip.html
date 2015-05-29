@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>c3py.grid &mdash; c3py 0.1 documentation</title>
+  <title>c3py.tooltip &mdash; c3py 0.1 documentation</title>
   
 
   
@@ -31,8 +31,7 @@
 
   
     <link rel="top" title="c3py 0.1 documentation" href="index.html"/>
-        <link rel="next" title="c3py.legend" href="legend.html"/>
-        <link rel="prev" title="c3py.ticks" href="ticks.html"/> 
+        <link rel="prev" title="c3py.legend" href="legend.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -76,9 +75,9 @@
 <li class="toctree-l1"><a class="reference internal" href="data.html">c3py.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axes.html">c3py.axes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ticks.html">c3py.ticks</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">c3py.grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid.html">c3py.grid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legend.html">c3py.legend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tooltip.html">c3py.tooltip</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">c3py.tooltip</a></li>
 </ul>
 
           
@@ -103,11 +102,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>c3py.grid</li>
+    <li>c3py.tooltip</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/grid.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tooltip.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -116,79 +115,76 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="c3py-grid">
-<h1>c3py.grid<a class="headerlink" href="#c3py-grid" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="c3py-tooltip">
+<h1>c3py.tooltip<a class="headerlink" href="#c3py-tooltip" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="c3py.grid.Grid">
-<em class="property">class </em><code class="descclassname">c3py.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manipulate the chart&#8217;s grid.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> (<a class="reference internal" href="axes.html#c3py.axes.Axes" title="c3py.axes.Axes"><em>c3py.axes.Axes</em></a>) &#8211; The chart&#8217;s axes object.</td>
-</tr>
-</tbody>
-</table>
+<dt id="c3py.tooltip.Tooltip">
+<em class="property">class </em><code class="descclassname">c3py.tooltip.</code><code class="descname">Tooltip</code><a class="headerlink" href="#c3py.tooltip.Tooltip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate the chart&#8217;s tooltip.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">tooltip_format = c3py.tooltip.TooltipFormat</code></dt>
+<dd></dd></dl>
+
 <dl class="method">
-<dt id="c3py.grid.Grid.custom_grid_line">
-<code class="descname">custom_grid_line</code><span class="sig-paren">(</span><em>axis</em>, <em>value</em>, <em>label=''</em>, <em>label_position='end'</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid.custom_grid_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a custom grid line to the chart.</p>
+<dt id="c3py.tooltip.Tooltip.hide">
+<code class="descname">hide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c3py.tooltip.Tooltip.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide the tooltip on the chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>axis</strong> (<em>str</em>) &#8211; <p>The axis on which to display the custom grid line.</p>
-<p><strong>Accepts:</strong> [&#8216;x&#8217; | &#8216;y&#8217; | &#8216;y2&#8217;]</p>
-</li>
-<li><strong>value</strong> (<em>must match x axis type</em>) &#8211; The value at which to display the custom grid line.</li>
-<li><strong>label</strong> (<em>str, optional</em>) &#8211; <p>The label to display with the custom grid line.</p>
-<p><strong>Default:</strong> &#8216;&#8217;</p>
-</li>
-<li><strong>label_position</strong> (<em>str, optional</em>) &#8211; <p>The position on the grid line at which to display the label.</p>
-<p><strong>Default:</strong> &#8216;end&#8217;</p>
-<p><strong>Accepts:</strong> [&#8216;start&#8217; | &#8216;middle&#8217; | &#8216;end&#8217;]</p>
-</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
-<dt id="c3py.grid.Grid.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>x=True</em>, <em>y=True</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.grid.Grid.show" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display a grid on the chart.</p>
+<dt id="c3py.tooltip.Tooltip.ungroup">
+<code class="descname">ungroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c3py.tooltip.Tooltip.ungroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ungroup the tooltips. When hovering at a point on a data series, only that series&#8217; tooltip will be shown,
+instead of all series&#8217; tooltips.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>bool, optional</em>) &#8211; <p>Whether or not to display the x grid.</p>
-<p><strong>Default:</strong> True</p>
-</li>
-<li><strong>y</strong> (<em>bool, optional</em>) &#8211; <p>Whether or not to display the y grid.</p>
-<p><strong>Default:</strong> True</p>
-</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="c3py.tooltip.TooltipFormat">
+<em class="property">class </em><code class="descclassname">c3py.tooltip.</code><code class="descname">TooltipFormat</code><a class="headerlink" href="#c3py.tooltip.TooltipFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manipulate the format of the tooltip.</p>
+<dl class="method">
+<dt id="c3py.tooltip.TooltipFormat.set_title">
+<code class="descname">set_title</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#c3py.tooltip.TooltipFormat.set_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the title of the tooltip. The variable &#8216;x&#8217; can be used to refer to the x value at the tooltip.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>title</strong> (<em>str</em>) &#8211; The title of the tooltip.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">chart</span><span class="o">.</span><span class="n">tooltip</span><span class="o">.</span><span class="n">tooltip_format</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">&#39;&quot;value on x-axis = &quot; + x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -201,10 +197,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="legend.html" class="btn btn-neutral float-right" title="c3py.legend" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="ticks.html" class="btn btn-neutral" title="c3py.ticks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="legend.html" class="btn btn-neutral" title="c3py.legend" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

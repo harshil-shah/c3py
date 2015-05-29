@@ -12,6 +12,7 @@ Contents:
    ticks.rst
    grid.rst
    legend.rst
+   tooltip.rst
 
 Indices and tables
 ==================
