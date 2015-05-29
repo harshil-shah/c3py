@@ -13,6 +13,8 @@ Contents:
    grid.rst
    legend.rst
    tooltip.rst
+   regions.rst
+   point.rst
 
 Indices and tables
 ==================
